@@ -59,18 +59,18 @@ jobs:
         with:
           args: .
 
-  # pytest:
-  #   name: pytest
-  #   runs-on: ubuntu-latest
-  #
-  #   steps:
-  #     - name: checkout
-  #       uses: actions/checkout@master
-  #
-  #     - name: pytest
-  #       uses: ./.github/actions/pytest
-  #       with:
-  #         entrypoint: ./.github/actions/pytest/entrypoint.sh
+  pytest:
+    name: pytest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: pytest
+        uses: ./.github/actions/pytest
+        with:
+          entrypoint: ./.github/actions/pytest/entrypoint.sh
 
   safety:
     name: safety
